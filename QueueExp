@@ -1,0 +1,24 @@
+Variables Declaration:
+
+-Declare a array
+-declare two variables(front=-1,rear=-1) to keep track of both the ends of queue
+
+Enqueue Method:
+
+-Adding elements at the end of the queue
+
+if queue is empty
+ 	 increment front and rear 
+	 add element
+	 Now both point to the same element
+else
+ 	increment rear
+ 	add at array[rear]
+
+DeQueue Method:
+
+-Deleting elements from the front of queue
+
+	store the array[front] value and return to main
+	then increment front
+	
