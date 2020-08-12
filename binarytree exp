@@ -1,0 +1,6 @@
+binary tree
+1.access--Inorder(LVR),Preorder(VLR),postorder(LRV)
+2.Memory--dynamic
+3.Data Insertion-At the leaf node
+(Balancing the left and right child of node)
+4.Use --Searching(BST)
