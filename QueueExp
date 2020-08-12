@@ -11,6 +11,8 @@ if queue is empty
  	 increment front and rear 
 	 add element
 	 Now both point to the same element
+else if queue is full
+	queue is full
 else
  	increment rear
  	add at array[rear]
