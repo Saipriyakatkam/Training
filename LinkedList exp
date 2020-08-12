@@ -1,0 +1,24 @@
+Node consist of data and pointer
+
+1)Adding the element at the end
+
+Declare a structure variable (temp)of same and point it to the head pointer 
+Traverse the temp variable until (temp->next ==NULL) is null.
+if it is null add the E data node
+
+2)adding at first
+
+Add the new node next to head( new->next) to head of the list
+and make the new as head.
+
+3)Adding After B
+
+Declare a structure variable (temp) and point it to the head
+
+traverse through the list and compare the data part of temp with the data 'B'
+(temp->data=='B')
+
+-add new node next to temp next(newnode->next=temp->next)
+-add new node to temp next (temp->next=newnode)
+
+ 
