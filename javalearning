@@ -1,0 +1,106 @@
+JAVA LEARNING
+DAY1:
+
+1.Source code Vs Object Code
+Source code is the code wriiten by the user.It is in human readable form
+Object code is the code produced by the compiler
+
+2.Using Compiler with flags
+
+3.Keywords, Variables
+Keywords are predefined words.It has its own purpose.
+Variables are used defined.
+
+4.Variable scope, lifetime, life time, initial value, modifiers
+Variable scope is the access of the variable in the program
+Ex:variables declared in the function has scope in function itsself.it cant be accessed outside.
+
+Lifetime of a variable is its existence in the program.
+
+Initial Value of variable depends on its datatype.
+
+Modifiers may be public,private
+
+5.Programming Constructs (Selection construct and loop constructs)
+Selection Construct--Conditional --if,elseif...
+Loop COnstructs-Repetition --for,while
+
+6.Declare Array
+datatype[] variable=new datatype[size];
+
+7.Store data in array and process elements
+Storing data and playing with it like printing,updating,creating,deleting etc.,
+
+8.Pointers, Declare and Initialize pointers
+Referencing objects
+Dynamic Creation
+Heap Memory allocation
+
+9.Function definitions/invocations
+Function advantage-reusable code
+
+Function declaration
+--------->return type function name(arguments)
+
+functions are invoked through function name
+
+10.Call functions by passing values and addresses
+call by values-any changes in the function is not reflected in the main
+call by addresses-any changes in the function is reflected in the main
+**We have done an example of creating a object and passing it to the function and there it changes the original values 
+both the objects point to same values.
+ 
+11.Dynamic memory allocation/de allocation
+The memory is allocated at the rum time compilation
+When ever the program want memory it gets memory from heap and after the program execution java automaticaly calls GC function
+to deallocate the memory.
+**this we have visualized in jvisualvm and jconsole
+
+12.Memory leakage
+-it happens when Garbage collector is unable to remove from the memory
+It occurs when
+--Objects present in heap and no longer used.
+--deallocation is not happening upto the allocated level
+
+13.User Defined Structures
+These are defined by the user.
+It can consit of different types of datatypes.
+
+14.Access data members
+Accessing data by creating objects.
+
+15.Dynamic memory allocation for user defined structures
+using linked lists for the structures created but the user 
+the program allocates the memory to use dynamically as soon as nodes are created.
+These are not contiguous.
+
+16.Array of pointers
+All the pointers of sametype can be stored in array
+
+17.Iterate on array of pointers
+Adding elements using address of operator(&)
+Getting elements usinf dereferencing operator (*)
+
+18.Implement Data Structures
+•	Linked List:
+	Access:Sequential
+	Memory:Dynamic
+	Operations:Insert at end,insert at begininng,insert before/after an element
+		   Delete at end,delete at begininng,delete before/after an element
+			print
+		   
+•	Stack:
+	Access:Sequential
+	Memory:static-arrays,dynamic-linkedlist
+	Operations:push,pop,peek,print,isempty,isfull
+
+•	Queue:
+	Access:Sequential
+	Memory:static-arrays,dynamic-linkedlist
+	Operations:enqueue,dequeue,peek,print
+
+•	Binary Tree:
+	Every node has two childs.
+	access--Inorder(LVR),Preorder(VLR),postorder(LRV)
+	Memory--dynamic
+
