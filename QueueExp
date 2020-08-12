@@ -2,6 +2,7 @@ Variables Declaration:
 
 -Declare a array
 -declare two variables(front=-1,rear=-1) to keep track of both the ends of queue
+-size
 
 Enqueue Method:
 
