@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>ALL HTML TAGS</title>
+</head>
+
+<body>
+<p style="color:blue"><b>HEADING TAGS</b></p>
+	<h1> HI.This is h1 tag </h1>
+	<h2> HI.This is h2 tag </h2>
+	<h3> HI.This is h3 tag </h3>
+	<h4> HI.This is h4 tag </h4>
+	<h5> HI.This is h5 tag </h5>
+	<h6> HI.This is h6 tag </h6>
+
+	<p>This is a paragraph tag</p>
+	<p>Hyperlink tag</p>
+	<a href="https://www.google.com">Google</a>
+	<p title="Image">Image tag </p>
+	<img src="https://tse3.mm.bing.net/th?id=OIP.E1leJ_aE8XjRBkcqP6fa8gHaEK&pid=Api&P=0&w=339&h=191"
+	width="400" height="400" alt="Html Image">
+</body>
+</html>
