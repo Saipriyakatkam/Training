@@ -6,46 +6,53 @@
 </head>
 <body>
 <form>
-<label>Employee Number:</label>
-<input type="text">
-<br/>
-<label>Employee Name:</label>
-<input type="text">
-<br/>
-<label>Birthday date</label>
-<input type="date">
-<br/>
-<label>Email</label>
-<input type="email">
-<br/>
-<label>City Preference</label>
-<input type="checkbox" id="c1">
-<label for="c1">Hyd</label>
-<input type="checkbox" id="c1">
-<label for="c1">Pune</label>
-<input type="checkbox" id="c1">
-<label for="c1">banglore</label>
-<input type="checkbox" id="c1">
-<label for="c1">delhi</label>
-
-<br/>
-<label>Maritual Status</label>
-<input type="radio" id="g" name="m">
-<label for="g">single</label>
-<input type="radio" id="g1" name="m">
-<label for="g1">Married</label>
-
-<br/>
-<label>Education</label>
-<select id="d">
-<option value="B.Tech">B.Tech</option>
-<option value="B.Com">B.Com</option>
-<option value="B.Arch">B.Arch</option>
-</select>
-
-<br/>
-<input type="submit">
-
+<table>
+<tr>
+	<td><label>Employee Number:</label></td>
+	<td><input type="text"></td>
+</tr>
+<tr>
+	<td><label>Employee Name:</label></td>
+	<td><input type="text"></td>
+</tr>
+<tr>
+	<td><label>Birthday date</label></td>
+	<td><input type="date"></td>
+</tr>
+<tr>
+	<td><label>Email</label></td>
+	<td><input type="email"></td>
+</tr>
+<tr>
+	<td><label>City Preference</label></td>
+	<td><input type="checkbox" id="c1">
+	<label for="c1">Hyd</label><br/>
+	<input type="checkbox" id="c1">
+	<label for="c1">Pune</label><br/>
+	<input type="checkbox" id="c1">
+	<label for="c1">banglore</label><br/>
+	<input type="checkbox" id="c1">
+	<label for="c1">delhi</label></td>
+</tr>
+<tr>
+	<td><label>Maritual Status</label></td>
+	<td><input type="radio" id="g" name="m">single<br/>
+	<input type="radio" id="g1" name="m">Married</td>
+</tr>
+<tr>
+	<td><label>Education</label>
+	<td><select id="d">
+	<option value="B.Tech">B.Tech</option>
+	<option value="B.Com">B.Com</option>
+	<option value="B.Arch">B.Arch</option>
+	</select></td>
+</tr>
+<tr>
+	<td>
+	<input type="submit">
+	</td>
+</tr>
+</table>
 </form>
 </body>
 </html>
