@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<form>
+<label>Employee Number:</label>
+<input type="text">
+<br/>
+<label>Employee Name:</label>
+<input type="text">
+<br/>
+<label>Birthday date</label>
+<input type="date">
+<br/>
+<label>Email</label>
+<input type="email">
+<br/>
+<label>City Preference</label>
+<input type="checkbox" id="c1">
+<label for="c1">Hyd</label>
+<input type="checkbox" id="c1">
+<label for="c1">Pune</label>
+<input type="checkbox" id="c1">
+<label for="c1">banglore</label>
+<input type="checkbox" id="c1">
+<label for="c1">delhi</label>
+
+<br/>
+<label>Maritual Status</label>
+<input type="radio" id="g" name="m">
+<label for="g">single</label>
+<input type="radio" id="g1" name="m">
+<label for="g1">Married</label>
+
+<br/>
+<label>Education</label>
+<select id="d">
+<option value="B.Tech">B.Tech</option>
+<option value="B.Com">B.Com</option>
+<option value="B.Arch">B.Arch</option>
+</select>
+
+<br/>
+<input type="submit">
+
+</form>
+</body>
+</html>
