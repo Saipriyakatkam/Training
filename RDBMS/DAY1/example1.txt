@@ -1,0 +1,52 @@
+SQL> create table dept(empno number(2) primary key,empname varchar(20),salary number(7),dept char(2));
+
+Table created.
+
+SQL> insert into dept values(1,'sai',15000,'IT');
+
+1 row created.
+
+SQL> insert into dept values(2,'priya',20000,'HR');
+
+1 row created.
+
+SQL> select * from dept;
+
+     EMPNO EMPNAME                  SALARY DE
+---------- -------------------- ---------- --
+         1 sai                       15000 IT
+         2 priya                     20000 HR
+
+SQL> insert into dept values(2,'priya',20000,'HR');
+insert into dept values(2,'priya',20000,'HR')
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SCOTT1.SYS_C007299) violated
+
+
+SQL> insert into dept values(2,'priyaaaaaaaaaaaaaaaaaaaaaa',20000,'HR');
+insert into dept values(2,'priyaaaaaaaaaaaaaaaaaaaaaa',20000,'HR')
+                          *
+ERROR at line 1:
+ORA-12899: value too large for column "SCOTT1"."DEPT"."EMPNAME" (actual: 26,
+maximum: 20)
+
+
+SQL> insert into dept values(2a,'priya',20000,'HR');
+insert into dept values(2a,'priya',20000,'HR')
+                         *
+ERROR at line 1:
+ORA-00917: missing comma
+
+
+SQL> insert into dept values(3,'riya',30000,'FI');
+
+1 row created.
+
+SQL> select * from dept;
+
+     EMPNO EMPNAME                  SALARY DE
+---------- -------------------- ---------- --
+         1 sai                       15000 IT
+         2 priya                     20000 HR
+         3 riya                      30000 FI
