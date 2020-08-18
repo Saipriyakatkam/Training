@@ -1,0 +1,303 @@
+SQL> create table dept(empno number(2) primary key,empname varchar(20),salary number(7),dept char(2));
+
+Table created.
+
+SQL> insert into dept values (1,'Vaishali',100,'IT');
+
+1 row created.
+
+SQL> insert into dept values (2,'Simran',300,'FI');
+
+1 row created.
+
+SQL> insert into dept values (3,'Vijetha',340,'IT');
+
+1 row created.
+
+SQL> insert into dept values (4,'Saumit',440,'IT');
+
+1 row created.
+
+SQL> insert into dept values (5,'Swarali',305,'HR');
+
+1 row created.
+
+SQL> insert into dept values (6,'Vishnu',999,'IT');
+
+1 row created.
+
+SQL> insert into dept values (7,'Reshma',1,'IT');
+
+1 row created.
+
+SQL> insert into dept values (8,'Rohit',453,'IT');
+
+1 row created.
+
+SQL> insert into dept values (9,'SaiKiran',110,'HR');
+
+1 row created.
+
+SQL> insert into dept values (10,'Naresh',705,'IT');
+
+1 row created.
+
+SQL> insert into dept values (11,'Aishwarya',560,'IT');
+
+1 row created.
+
+SQL> insert into dept values (12,'Akash',411,'IT');
+
+1 row created.
+
+SQL> insert into dept values (13,'Akshay',110,'FI');
+
+1 row created.
+
+SQL> insert into dept values (14,'Anusha',2220,'IT');
+
+1 row created.
+
+SQL> insert into dept values (15,'Naga',10,'IT');
+
+1 row created.
+
+SQL> insert into dept values (16,'Ramya',5000,'FI');
+
+1 row created.
+
+SQL> select * from dept;
+
+     EMPNO EMPNAME                  SALARY DE
+---------- -------------------- ---------- --
+         1 Vaishali                    100 IT
+         2 Simran                      300 FI
+         3 Vijetha                     340 IT
+         4 Saumit                      440 IT
+         5 Swarali                     305 HR
+         6 Vishnu                      999 IT
+         7 Reshma                        1 IT
+         8 Rohit                       453 IT
+         9 SaiKiran                    110 HR
+        10 Naresh                      705 IT
+        11 Aishwarya                   560 IT
+
+     EMPNO EMPNAME                  SALARY DE
+---------- -------------------- ---------- --
+        12 Akash                       411 IT
+        13 Akshay                      110 FI
+        14 Anusha                     2220 IT
+        15 Naga                         10 IT
+        16 Ramya                      5000 FI
+
+16 rows selected.
+
+==============SALARY=================
+
+SQL> select * from dept where salary>400;
+
+     EMPNO EMPNAME                  SALARY DE
+---------- -------------------- ---------- --
+         4 Saumit                      440 IT
+         6 Vishnu                      999 IT
+         8 Rohit                       453 IT
+        10 Naresh                      705 IT
+        11 Aishwarya                   560 IT
+        12 Akash                       411 IT
+        14 Anusha                     2220 IT
+        16 Ramya                      5000 FI
+
+8 rows selected.
+
+SQL> select * from dept where salary<400;
+
+     EMPNO EMPNAME                  SALARY DE
+---------- -------------------- ---------- --
+         1 Vaishali                    100 IT
+         2 Simran                      300 FI
+         3 Vijetha                     340 IT
+         5 Swarali                     305 HR
+         7 Reshma                        1 IT
+         9 SaiKiran                    110 HR
+        13 Akshay                      110 FI
+        15 Naga                         10 IT
+
+8 rows selected.
+SQL> select * from dept where salary<=100;
+
+     EMPNO EMPNAME                  SALARY DE
+---------- -------------------- ---------- --
+         1 Vaishali                    100 IT
+         7 Reshma                        1 IT
+        15 Naga                         10 IT
+
+SQL> select * from dept where salary>=1000;
+
+     EMPNO EMPNAME                  SALARY DE
+---------- -------------------- ---------- --
+        14 Anusha                     2220 IT
+        16 Ramya                      5000 FI
+
+SQL> select * from dept where salary!=453;
+
+     EMPNO EMPNAME                  SALARY DE
+---------- -------------------- ---------- --
+         1 Vaishali                    100 IT
+         2 Simran                      300 FI
+         3 Vijetha                     340 IT
+         4 Saumit                      440 IT
+         5 Swarali                     305 HR
+         6 Vishnu                      999 IT
+         7 Reshma                        1 IT
+         9 SaiKiran                    110 HR
+        10 Naresh                      705 IT
+        11 Aishwarya                   560 IT
+        12 Akash                       411 IT
+
+     EMPNO EMPNAME                  SALARY DE
+---------- -------------------- ---------- --
+        13 Akshay                      110 FI
+        14 Anusha                     2220 IT
+        15 Naga                         10 IT
+        16 Ramya                      5000 FI
+
+15 rows selected.
+
+SQL> select * from dept where salary between 200 and 460;
+
+     EMPNO EMPNAME                  SALARY DE
+---------- -------------------- ---------- --
+         2 Simran                      300 FI
+         3 Vijetha                     340 IT
+         4 Saumit                      440 IT
+         5 Swarali                     305 HR
+         8 Rohit                       453 IT
+        12 Akash                       411 IT
+
+6 rows selected.
+
+======================DEPT===============================
+
+SQL> select * from dept where dept='IT';
+
+     EMPNO EMPNAME                  SALARY DE
+---------- -------------------- ---------- --
+         1 Vaishali                    100 IT
+         3 Vijetha                     340 IT
+         4 Saumit                      440 IT
+         6 Vishnu                      999 IT
+         7 Reshma                        1 IT
+         8 Rohit                       453 IT
+        10 Naresh                      705 IT
+        11 Aishwarya                   560 IT
+        12 Akash                       411 IT
+        14 Anusha                     2220 IT
+        15 Naga                         10 IT
+
+11 rows selected.
+
+SQL> select * from dept where dept='IT' or dept='FI';
+
+     EMPNO EMPNAME                  SALARY DE
+---------- -------------------- ---------- --
+         1 Vaishali                    100 IT
+         2 Simran                      300 FI
+         3 Vijetha                     340 IT
+         4 Saumit                      440 IT
+         6 Vishnu                      999 IT
+         7 Reshma                        1 IT
+         8 Rohit                       453 IT
+        10 Naresh                      705 IT
+        11 Aishwarya                   560 IT
+        12 Akash                       411 IT
+        13 Akshay                      110 FI
+
+     EMPNO EMPNAME                  SALARY DE
+---------- -------------------- ---------- --
+        14 Anusha                     2220 IT
+        15 Naga                         10 IT
+        16 Ramya                      5000 FI
+
+14 rows selected.
+
+SQL> select * from dept where dept in ('IT','FI');
+
+     EMPNO EMPNAME                  SALARY DE
+---------- -------------------- ---------- --
+         1 Vaishali                    100 IT
+         2 Simran                      300 FI
+         3 Vijetha                     340 IT
+         4 Saumit                      440 IT
+         6 Vishnu                      999 IT
+         7 Reshma                        1 IT
+         8 Rohit                       453 IT
+        10 Naresh                      705 IT
+        11 Aishwarya                   560 IT
+        12 Akash                       411 IT
+        13 Akshay                      110 FI
+
+     EMPNO EMPNAME                  SALARY DE
+---------- -------------------- ---------- --
+        14 Anusha                     2220 IT
+        15 Naga                         10 IT
+        16 Ramya                      5000 FI
+
+14 rows selected.
+
+
+================LIKE==============
+SQL> select * from dept where empname like 'R%';
+
+     EMPNO EMPNAME                  SALARY DE
+---------- -------------------- ---------- --
+         7 Reshma                        1 IT
+         8 Rohit                       453 IT
+        16 Ramya                      5000 FI
+
+SQL> select * from dept where empname like '%li';
+
+     EMPNO EMPNAME                  SALARY DE
+---------- -------------------- ---------- --
+         1 Vaishali                    100 IT
+         5 Swarali                     305 HR
+
+SQL> select * from dept where empname like '%sh%';
+
+     EMPNO EMPNAME                  SALARY DE
+---------- -------------------- ---------- --
+         1 Vaishali                    100 IT
+         6 Vishnu                      999 IT
+         7 Reshma                        1 IT
+        10 Naresh                      705 IT
+        11 Aishwarya                   560 IT
+        12 Akash                       411 IT
+        13 Akshay                      110 FI
+        14 Anusha                     2220 IT
+
+8 rows selected.
+
+SQL> select * from dept where empname like 'S%i';
+
+     EMPNO EMPNAME                  SALARY DE
+---------- -------------------- ---------- --
+         5 Swarali                     305 HR
+
+SQL> select * from dept where empname like '__g%';
+
+     EMPNO EMPNAME                  SALARY DE
+---------- -------------------- ---------- --
+        15 Naga                         10 IT
+
+
+SQL> select * from dept where empname like '_a%';
+
+     EMPNO EMPNAME                  SALARY DE
+---------- -------------------- ---------- --
+         1 Vaishali                    100 IT
+         4 Saumit                      440 IT
+         9 SaiKiran                    110 HR
+        10 Naresh                      705 IT
+        15 Naga                         10 IT
+        16 Ramya                      5000 FI
+
+6 rows selected.
