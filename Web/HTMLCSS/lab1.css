@@ -1,0 +1,18 @@
+
+table{
+	border: 1px solid black;
+}
+body{
+	background-color:cyan;
+	}
+h1.topic{
+	border-style:double;
+	border-color:red;
+	border-width:4px;
+}
+h1.subtopic{
+	border-style:solid;
+	border-color:cyan;
+	border-width:2px;
+}
+
