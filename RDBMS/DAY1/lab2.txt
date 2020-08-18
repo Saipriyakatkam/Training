@@ -1,0 +1,224 @@
+*******************************************************************
+
+create table emp(
+		empno number(3) primary key,  
+		ename varchar(20),
+		salary number(7),
+		dept char(2)
+		);
+		
+	
+insert into emp values (1,'Vaishali',100,'IT');
+insert into emp values (2,'Simran',300,'FI');
+insert into emp values (3,'Vijetha',340,'IT');
+insert into emp values (4,'Saumit',440,'IT');
+insert into emp values (5,'Swarali',305,'HR');
+insert into emp values (6,'Vishnu',999,'IT');
+insert into emp values (7,'Reshma',1,'IT');
+insert into emp values (8,'Rohit',453,'IT');
+insert into emp values (9,'SaiKiran',110,'HR');
+insert into emp values (10,'Naresh',705,'IT');
+insert into emp values (11,'Aishwarya',560,'IT');
+insert into emp values (12,'Akash',411,'IT');
+insert into emp values (13,'Akshay',110,'FI');
+insert into emp values (14,'Anusha',2220,'IT');
+insert into emp values (15,'Naga',10,'IT');
+insert into emp values (16,'Ramya',5000,'FI');
+
+
+
+==================DISTINCT=======================
+
+SQL> select DISTINCT dept from dept;
+
+DEselect count(*)
+--
+FI
+HR
+IT
+
+===================count===================
+
+SQL> select count(*) from emp;
+
+  COUNT(*)
+----------
+        16
+
+
+==================ORDER BY===================
+
+        16
+
+SQL> select * from emp order by empno;
+
+     EMPNO ENAME                    SALARY DE
+---------- -------------------- ---------- --
+         1 Vaishali                    100 IT
+         2 Simran                      300 FI
+         3 Vijetha                     340 IT
+         4 Saumit                      440 IT
+         5 Swarali                     305 HR
+         6 Vishnu                      999 IT
+         7 Reshma                        1 IT
+         8 Rohit                       453 IT
+         9 SaiKiran                    110 HR
+        10 Naresh                      705 IT
+        11 Aishwarya                   560 IT
+
+     EMPNO ENAME                    SALARY DE
+---------- -------------------- ---------- --
+        12 Akash                       411 IT
+        13 Akshay                      110 FI
+        14 Anusha                     2220 IT
+        15 Naga                         10 IT
+        16 Ramya                      5000 FI
+
+16 rows selected.
+
+SQL> select * from emp order by empno desc;
+
+     EMPNO ENAME                    SALARY DE
+---------- -------------------- ---------- --
+        16 Ramya                      5000 FI
+        15 Naga                         10 IT
+        14 Anusha                     2220 IT
+        13 Akshay                      110 FI
+        12 Akash                       411 IT
+        11 Aishwarya                   560 IT
+        10 Naresh                      705 IT
+         9 SaiKiran                    110 HR
+         8 Rohit                       453 IT
+         7 Reshma                        1 IT
+         6 Vishnu                      999 IT
+
+     EMPNO ENAME                    SALARY DE
+---------- -------------------- ---------- --
+         5 Swarali                     305 HR
+         4 Saumit                      440 IT
+         3 Vijetha                     340 IT
+         2 Simran                      300 FI
+         1 Vaishali                    100 IT
+
+16 rows selected.
+
+SQL> select * from emp order by dept,empname;
+select * from emp order by dept,empname
+                                *
+ERROR at line 1:
+ORA-00904: "EMPNAME": invalid identifier
+
+
+SQL> select * from emp order by dept,ename;
+
+     EMPNO ENAME                    SALARY DE
+---------- -------------------- ---------- --
+        13 Akshay                      110 FI
+        16 Ramya                      5000 FI
+         2 Simran                      300 FI
+         9 SaiKiran                    110 HR
+         5 Swarali                     305 HR
+        11 Aishwarya                   560 IT
+        12 Akash                       411 IT
+        14 Anusha                     2220 IT
+        15 Naga                         10 IT
+        10 Naresh                      705 IT
+         7 Reshma                        1 IT
+
+     EMPNO ENAME                    SALARY DE
+---------- -------------------- ---------- --
+         8 Rohit                       453 IT
+         4 Saumit                      440 IT
+         1 Vaishali                    100 IT
+         3 Vijetha                     340 IT
+         6 Vishnu                      999 IT
+
+16 rows selected.
+
+SQL> select * from emp order by dept desc ,ename asc;
+
+     EMPNO ENAME                    SALARY DE
+---------- -------------------- ---------- --
+        11 Aishwarya                   560 IT
+        12 Akash                       411 IT
+        14 Anusha                     2220 IT
+        15 Naga                         10 IT
+        10 Naresh                      705 IT
+         7 Reshma                        1 IT
+         8 Rohit                       453 IT
+         4 Saumit                      440 IT
+         1 Vaishali                    100 IT
+         3 Vijetha                     340 IT
+         6 Vishnu                      999 IT
+
+     EMPNO ENAME                    SALARY DE
+---------- -------------------- ---------- --
+         9 SaiKiran                    110 HR
+         5 Swarali                     305 HR
+        13 Akshay                      110 FI
+        16 Ramya                      5000 FI
+         2 Simran                      300 FI
+
+16 rows selected.
+
+===================GROUP BY==================
+
+
+SQL> select dept from emp group by dept;
+
+DE
+--
+FI
+HR
+IT
+
+SQL> select dept,count(*) from emp group by dept;
+
+DE   COUNT(*)
+-- ----------
+FI          3
+HR          2
+IT         11
+
+SQL> select dept,empname,max(salary) from emp group by dept;
+select dept,empname,max(salary) from emp group by dept
+            *
+ERROR at line 1:
+ORA-00904: "EMPNAME": invalid identifier
+
+
+SQL> select dept,max(salary) from emp group by dept;
+
+DE MAX(SALARY)
+-- -----------
+FI        5000
+HR         305
+IT        2220
+
+SQL> select dept,min(salary),max(salary) from emp group by dept;
+
+DE MIN(SALARY) MAX(SALARY)
+-- ----------- -----------
+FI         110        5000
+HR         110         305
+IT           1        2220
+
+
+====================HAVING===========================
+
+SELECT column_name(s)
+FROM table_name
+WHERE condition
+GROUP BY column_name(s)
+HAVING condition
+ORDER BY column_name(s);
+
+
+
+
+SQL> select ename from emp group by ename having ename like '%li';
+
+ENAME
+--------------------
+Swarali
+Vaishali
