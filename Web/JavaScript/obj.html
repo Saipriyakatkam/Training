@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script type="text/javascript">
+var email=['k','s','p','@','g','m','a','i','l','.','c','o','m'];
+
+function Emp(){
+		this.empno = 10;
+		this.ename="aa"
+		this.salary=1000;
+		this.incr = incr;
+
+		function incr(){
+			this.salary+= this.salary*0.1;
+		}
+		this.validate=validate;
+		function validate(){
+			console.log(email[0]);
+			for(var i=0;i<email.length;i++)
+				{
+				if(email[i]=='@')
+					{
+					console.log("correct")
+					}
+				
+				}		
+		}
+}
+
+function test1(){
+	var e= new Emp()
+	//incr()
+//	console.log(e);
+	e.incr();
+	e.validate();
+	//console.log(e);
+}
+</script>
+</head>
+<body onload="test1()">
+</body>
+</html>

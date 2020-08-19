@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+function test1(){
+	
+	var str="<td>"+document.getElementById("empno").value+"</td>"+
+	"<td>"+document.getElementById("mynm").value+"</td>"+
+	"<td>"+document.getElementById("sal").value+"</td>";
+	console.log(str);
+	document.getElementById("display").innerHTML = str;
+}
+		
+</script>
+
+</head>
+<body>
+<form>
+<table>
+<tr>
+<td>Employee Number:</td>
+<td><input type="text" id="empno"/></td>
+</tr>
+<tr>
+<td>Employee Name :</td>
+<td> <input type="text" id="mynm" /><br/></td>
+</tr>
+<tr>
+<td>Salary:</td><td><input type="text" id="sal"/><br/></td>
+</tr>
+<tr>
+<td><input id="btn" type="button" value="Click Me" onclick="test1()" /></td>
+</tr>
+</table>
+</form>
+<div>
+<table border="1">
+<tr>
+<th>id</th>
+<th>name</th>
+<th>salary</th>
+</tr>
+<tr id="display">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</table>	
+</div>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Arrays</title>
+<script>
+var names=new Array()
+function Emp(){
+
+	names.push(document.getElementById("inp").value)
+	var s=""
+    for(i=0;i<names.length;i++){
+		s +="<tr>"+"<td>"+names[i]+"</td>"+"</tr>"
+}
+	s="<tr>"+"<td>"+"Names:"+"</td>"+"</tr>"+s;
+	document.getElementById("mytbl").innerHTML=s;
+}
+function obj()
+{
+	Var emp=new Emp();
+	emp.add();
+	}
+</script>
+</head>
+
+<body>
+Name:<input id="inp" type="text"><br/><br/>
+<input type="button" id="btn" value="Add" onclick="addToArray()"><br/><br/>
+<div id="div1">
+<table border="1" id="mytbl">
+<tr>
+<td>Names
+</tr>
+</table>
+</div>
+</body>
+</html>
