@@ -1,0 +1,109 @@
+SQL> create table asgn(pid number(2),pname varchar(20),bday date,city varchar(15),state varchar(15),pan varchar(10) primary key);
+
+Table created.
+
+SQL> desc asgn;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ PID                                                NUMBER(2)
+ PNAME                                              VARCHAR2(20)
+ BDAY                                               DATE
+ CITY                                               VARCHAR2(15)
+ STATE                                              VARCHAR2(15)
+ PAN                                       NOT NULL VARCHAR2(10)
+
+
+
+SQL> insert into asgn values(1,'Sai',to_date('26-08-1999','dd-mm-yyyy'),'Hyd','Tel','dsahfg252');
+
+1 row created.
+
+SQL> insert into asgn values(2,'SaiPriya',to_date('25-04-1987','dd-mm-yyyy'),'Hyd','MP','dssahfg252');
+
+1 row created.
+
+SQL> insert into asgn values(3,'Riya',to_date('15-04-1980','dd-mm-yyyy'),'Pune','MP','frsahfg252');
+
+1 row created.
+
+SQL> insert into asgn values(0,'Sri',to_date('15-04-1980','dd-mm-yyyy'),'Raj','UP','djdsja32');
+
+1 row created.
+
+
+SQL> update  asgn set pid='4' where pan='djdsja32';
+
+1 row updated.
+
+SQL> select * from asgn;
+
+       PID PNAME                BDAY      CITY            STATE
+---------- -------------------- --------- --------------- ---------------
+PAN
+----------
+         1 Sai                  26-AUG-99 Hyd             Tel
+dsahfg252
+
+         2 SaiPriya             25-APR-87 Hyd             MP
+dssahfg252
+
+         3 Riya                 15-APR-80 Pune            MP
+frsahfg252
+
+
+       PID PNAME                BDAY      CITY            STATE
+---------- -------------------- --------- --------------- ---------------
+PAN
+----------
+         4 Sri                  15-APR-80 Raj             UP
+djdsja32
+
+
+SQL> update asgn set state='Tel' where city='Hyd';
+
+2 rows updated.
+
+SQL> select * from asgn;
+
+       PID PNAME                BDAY      CITY            STATE
+---------- -------------------- --------- --------------- ---------------
+PAN
+----------
+         1 Sai                  26-AUG-99 Hyd             Tel
+dsahfg252
+
+         2 SaiPriya             25-APR-87 Hyd             Tel
+dssahfg252
+
+         3 Riya                 15-APR-80 Pune            MP
+frsahfg252
+
+
+       PID PNAME                BDAY      CITY            STATE
+---------- -------------------- --------- --------------- ---------------
+PAN
+----------
+         4 Sri                  15-APR-80 Raj             UP
+djdsja32
+
+
+SQL> delete asgn where pid=4;
+
+1 row deleted.
+
+SQL> select * from asgn;
+
+       PID PNAME                BDAY      CITY            STATE
+---------- -------------------- --------- --------------- ---------------
+PAN
+----------
+         1 Sai                  26-AUG-99 Hyd             Tel
+dsahfg252
+
+         2 SaiPriya             25-APR-87 Hyd             Tel
+dssahfg252
+
+         3 Riya                 15-APR-80 Pune            MP
+frsahfg252
+
+
