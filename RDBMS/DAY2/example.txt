@@ -31,7 +31,7 @@ SQL> insert into empedu values(653,'B.com','SVR',53,2019);
 
 1 row created.
 
-SQL> select * from emp;
+SQL> select * from emp; 
 
      EMPNO ENAME                    SALARY
 ---------- -------------------- ----------
