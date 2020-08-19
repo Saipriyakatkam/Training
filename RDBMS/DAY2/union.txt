@@ -1,0 +1,132 @@
+
+SQL> create table permemp (
+  2  empno number(3) primary key,
+  3  ename varchar(20),
+  4  salary number(7),
+  5  dept char(2)
+  6  );
+
+Table created.
+
+SQL>
+SQL>
+SQL> insert into permemp values (1,'Vaishali',100,'IT');
+
+1 row created.
+
+SQL> insert into permemp values (2,'Simran',300,'FI');
+
+1 row created.
+
+SQL> insert into permemp values (3,'Vijetha',340,'IT');
+
+1 row created.
+
+SQL> insert into permemp values (4,'Saumit',440,'IT');
+
+1 row created.
+
+SQL>
+SQL> create table tempemp (
+  2  empno number(3) primary key,
+  3  ename varchar(20),
+  4  compname varchar(20),
+  5  contract char(2)
+  6  );
+
+Table created.
+
+SQL> insert into tempemp values (4,'Saumit','comp1','YR');
+
+1 row created.
+
+SQL> insert into tempemp values (5,'Rekha','comp3','QR');
+
+1 row created.
+
+SQL> insert into tempemp values (6,'Ramya','comp2','YR');
+
+1 row created.
+
+SQL> insert into tempemp values (7,'Saumitra','comp1','QR');
+
+1 row created.
+
+SQL> select * from permemp;
+
+     EMPNO ENAME                    SALARY DE
+---------- -------------------- ---------- --
+         1 Vaishali                    100 IT
+         2 Simran                      300 FI
+         3 Vijetha                     340 IT
+         4 Saumit                      440 IT
+
+SQL> select * from tempemp;
+
+     EMPNO ENAME                COMPNAME             CO
+---------- -------------------- -------------------- --
+         4 Saumit               comp1                YR
+         5 Rekha                comp3                QR
+         6 Ramya                comp2                YR
+         7 Saumitra             comp1                QR
+
+SQL> select empno, ename,dept  from permemp Union select empno, ename,compname from tempemp;
+
+     EMPNO ENAME                DEPT
+---------- -------------------- --------------------
+         1 Vaishali             IT
+         2 Simran               FI
+         3 Vijetha              IT
+         4 Saumit               IT
+         4 Saumit               comp1
+         5 Rekha                comp3
+         6 Ramya                comp2
+         7 Saumitra             comp1
+
+8 rows selected.
+
+SQL> select empno, ename from permemp Union all select empno, ename from tempemp;
+
+     EMPNO ENAME
+---------- --------------------
+         1 Vaishali
+         2 Simran
+         3 Vijetha
+         4 Saumit
+         4 Saumit
+         5 Rekha
+         6 Ramya
+         7 Saumitra
+
+8 rows selected.
+
+SQL> select empno, ename from permemp Union select empno, ename from tempemp;
+
+     EMPNO ENAME
+---------- --------------------
+         1 Vaishali
+         2 Simran
+         3 Vijetha
+         4 Saumit
+         5 Rekha
+         6 Ramya
+         7 Saumitra
+
+7 rows selected.
+
+SQL> select empno, ename,dept as Department, null as company  from permemp
+  2   Union
+  3  select empno, ename,null ,compname from tempemp;
+
+     EMPNO ENAME                DE COMPANY
+---------- -------------------- -- --------------------
+         1 Vaishali             IT
+         2 Simran               FI
+         3 Vijetha              IT
+         4 Saumit               IT
+         4 Saumit                  comp1
+         5 Rekha                   comp3 
+         6 Ramya                   comp2
+         7 Saumitra                comp1
+
+8 rows selected.
