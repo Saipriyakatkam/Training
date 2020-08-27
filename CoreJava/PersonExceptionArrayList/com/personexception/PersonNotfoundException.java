@@ -24,10 +24,10 @@ public class PersonNotfoundException extends Exception{
 
 
 	
-	public static void checkException()
+	public static void checkException(String m)
 	{
 				try {
-					throw new PersonNotfoundException("Person Not Found");
+					throw new PersonNotfoundException(m);
 				} catch (PersonNotfoundException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
@@ -36,3 +36,4 @@ public class PersonNotfoundException extends Exception{
 	
 	}
 }
+
